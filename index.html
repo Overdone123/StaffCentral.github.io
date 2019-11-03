@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Staff Central</title>
+		<meta
+			name="description"
+			content="Preview and Order custom services for all your needs."
+		/>
+		<meta name="author" content="TrueBlueMan" />
+		<link
+			rel="shortcut icon"
+			type="image/x-icon"
+			href="./ImageDir/Staff_Central_Logo.png"
+		/>
+		<link rel="stylesheet" href="./StyleSheets/Styles.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+	</head>
+	<body>
+		<div id="mySidenav" class="sidenav">
+			<a href="index.html" class="title">
+				<img
+					src="./ImageDir/AnimatedLogo.gif"
+					style="align-self: auto;"
+					width="32px"
+					height="32px"
+					alt="HomePage"
+				/>StaffCentral&trade;</a
+			>
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+				>&otimes;</a
+			>
+			<a href="#" onclick="openPage('Home' , this, '#777')" id="defaultOpen"
+				><i class="fa fa-home"></i>Home</a
+			>
+			<a href="#" onclick="openPage('Teams' , this, '#777')"
+				><i class="fa fa-users"></i> Team</a
+			>
+			<a href="#" onclick="openPage('Contact' , this, '#777')"
+				><i class="fa fa-support"></i>Contact</a
+			>
+		</div>
+
+		<div class="main">
+			<div id="navbar">
+				<a href="#" class="active" onclick="openNav()"
+					><i class="fa fa-bars"></i
+				></a>
+				<a href="#" class="link" onclick="openPage('Contact' , this, '#777')"
+					><i class="fa fa-support"></i> Contact</a
+				><a href="#" class="link" onclick="openPage('Teams' , this, '#777')"
+					><i class="fa fa-users"></i> Team</a
+				><a
+					href="#"
+					class="link"
+					onclick="openPage('Home' , this, '#777')"
+					id="defaultOpen"
+					><i class="fa fa-home"></i> Home</a
+				>
+			</div>
+			<div id="Home" class="tabcontent">
+				<div class="header">
+					<h1>Home</h1>
+					<h2>Welcome to StaffCentral</h2>
+				</div>
+				<h3>PlaceHolderTitle</h3>
+				<p>
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora
+					impedit nulla possimus odio enim atque nesciunt rem commodi veniam.
+					Numquam voluptas sequi in temporibus deserunt ea ducimus quis velit?
+					Harum?
+				</p>
+			</div>
+
+			<div id="Teams" class="tabcontent">
+				<div class="header">
+					<h1>Teams</h1>
+					<h2>Who we are, What we do.</h2>
+				</div>
+				<h3>PlaceHolderTitle</h3>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero qui
+					amet placeat nemo harum quas doloremque excepturi fuga, neque nesciunt
+					dicta vitae sint! Dolore veniam iusto eligendi fugit molestias quam!
+				</p>
+			</div>
+
+			<div id="Contact" class="tabcontent">
+				<div class="header">
+					<h1>Contact</h1>
+					<h2>Got Questions? We got answers.</h2>
+				</div>
+				<h3>PlaceHolderTitle</h3>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit eligendi
+					repellendus fugit, quod blanditiis iste quos impedit incidunt a,
+					recusandae commodi aspernatur, ipsa similique officia natus porro nisi
+					sint perspiciatis.
+				</p>
+			</div>
+		</div>
+		<script src="./Scripts/app.js"></script>
+	</body>
+</html>
