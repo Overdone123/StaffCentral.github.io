@@ -1,40 +1,89 @@
 body,
 html {
-    background-color: #ffffff;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    font-family: Arial;
-    scroll-behavior: smooth;
+	background-color: #111;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	font-family: Arial;
+	scroll-behavior: smooth;
+
 }
-  
-  /* Set default styles for tab content */
-  .tabcontent {
-    display: none; 
-  }
-  
-  /* Style each tab content individually */
-  #Home .header {
-      background-color:#999;
-      color: #333;
-      padding: 50px; 
-      text-align: center;
-    }
 
-  #Teams .header {
-    background-color:#999;
-    color: #333;
-    padding: 50px; 
-    text-align: center;
-  }
+/* Set default styles for tab content */
+.tabcontent {
+	display: none;
+	position: relative;
+	animation-name: fade;
+	animation-duration: 2s;
+	-webkit-animation-name: fade;
+	/* Safari 4.0 - 8.0 */
+	-webkit-animation-duration: 2s;
+	/* Safari 4.0 - 8.0 */
+}
 
-  #Contact .header{
-    background-color:#999;
-    color: #333;
-    padding: 50px; 
-    text-align: center;
-  }
+h1 {
+	font-size: 8vw;
+}
 
+h2 {
+	font-size: 6vw;
+}
+
+h3 {
+	font-size: 4vw;
+}
+
+p {
+	font-size: 2vw 1fr;
+}
+
+li {
+	font-size: 2vw 1fr;
+}
+
+/* Style each tab content individually */
+#Home .Header {
+	background-color: #fff;
+	color: #333;
+	padding: 50px;
+	text-align: center;
+}
+
+#Home .Main {
+	background-color: #999;
+	color: #111;
+	padding: 50px;
+	text-align: left;
+}
+
+
+#Teams .Header {
+	background-color: #fff;
+	color: #333;
+	padding: 50px;
+	text-align: center;
+}
+
+#Teams .Main {
+	background-color: #999;
+	color: #111;
+	padding: 50px;
+	text-align: left;
+}
+
+#Contact .Header {
+	background-color: #fff;
+	color: #333;
+	padding: 50px;
+	text-align: center;
+}
+
+#Contact .Main {
+	background-color: #999;
+	color: #111;
+	padding: 50px;
+	text-align: left;
+}
 
 /* Style the navbar */
 #navbar {
@@ -45,6 +94,7 @@ html {
 	align-items: top;
 	width: screen;
 }
+
 #navbar a.active {
 	display: none;
 	background-color: skyblue;
@@ -53,6 +103,7 @@ html {
 	margin-right: 50;
 	float: left;
 }
+
 #navbar s {
 	display: block;
 	color: whitesmoke;
@@ -65,31 +116,35 @@ html {
 	float: left;
 	padding: 16px;
 }
+
 #navbar s:hover {
 	box-shadow: 4px 4px 8px violet, 0 0 25px blue 0 0 5px aqua;
 	font-size: 16px;
 	border-radius: 28px;
 	transition: 0.5s;
 }
+
 /* Navbar links */
-#navbar a.link  {
-    background-color: #555;
-    cursor: pointer;
+#navbar a.link {
+	background-color: #555;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 14px 16px;
 	display: block;
 	color: #f2f2f2;
 	text-align: center;
 	overflow: initial;
 	padding: 14px 16px;
 	text-decoration: none;
-    float: right;
-    font-size: 17px;
+	float: right;
+	font-size: 17px;
 	font-weight: bold;
 	margin-left: 50;
+	transition: .5s;
 }
-  /* Change background color of buttons on hover */
-#navbar a.link:hover {
-    background-color: #777;
-  }
+
+/* Change background color of buttons on hover */
 #navbar g {
 	display: block;
 	border-bottom: 2px solid aqua;
@@ -100,6 +155,7 @@ html {
 	text-decoration: none;
 	float: right;
 }
+
 #navbar b {
 	display: block;
 	color: #f2f2f2;
@@ -110,11 +166,17 @@ html {
 	float: left;
 }
 
-#navbar a:hover {
-	border-bottom: 2px solid aqua;
-	color: rgb(0, 132, 255);
+#navbar a {
+	background-color: #555;
 	transition: 0.5s;
 }
+
+#navbar a:hover {
+	border-bottom: 2px solid aqua;
+	background-color: #777;
+	transition: 0.5s;
+}
+
 /* Page content */
 .content {
 	padding: 16px;
@@ -131,22 +193,30 @@ html {
 }
 
 /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-.sticky + .content {
+.sticky+.content {
 	padding-top: 60px;
 }
 
 /* The side navigation menu */
 .sidenav {
-	height: 100%; /* 100% Full-height */
-	width: 0; /* 0 width - change this with JavaScript */
-	position: fixed; /* Stay in place */
-	z-index: 3; /* Stay on top */
+	height: 100%;
+	/* 100% Full-height */
+	width: 0;
+	/* 0 width - change this with JavaScript */
+	position: fixed;
+	/* Stay in place */
+	z-index: 3;
+	/* Stay on top */
 	top: 0;
 	left: 0;
-	background-color: #555; /* Black*/
-	overflow-x: hidden; /* Disable horizontal scroll */
-	padding-top: 60px; /* Place content 60px from the top */
-	transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+	background-color: #555;
+	/* Black*/
+	overflow-x: hidden;
+	/* Disable horizontal scroll */
+	padding-top: 60px;
+	/* Place content 60px from the top */
+	transition: 0.5s;
+	/* 0.5 second transition effect to slide in the sidenav */
 }
 
 /* The navigation menu links */
@@ -175,6 +245,7 @@ html {
 	font-size: 32px;
 	margin-left: 50px;
 }
+
 .sidenav .title {
 	position: absolute;
 	top: 0;
@@ -182,10 +253,11 @@ html {
 	font-size: 125%;
 	margin-right: -50px;
 }
+
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
 	transition: margin-left 0.5s;
-	width:100%;
+	width: 100%;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
@@ -193,13 +265,14 @@ html {
 	.sidenav {
 		padding-top: 0;
 	}
+
 	.sidenav a {
 		font-size: 18px;
 	}
 }
 
 @media screen and (max-width: 640px) {
-    #navbar a.link{
+	#navbar a.link {
 		display: none;
 		color: #f2f2f2;
 		text-align: center;
@@ -209,7 +282,8 @@ html {
 		float: right;
 		font-weight: bold;
 		margin-left: 50;
-    }  
+	}
+
 	#navbar a.title {
 		display: block;
 		color: #f2f2f2;
@@ -218,6 +292,7 @@ html {
 		text-decoration: none;
 		font-size: 0px;
 	}
+
 	#navbar g {
 		display: none;
 		border-bottom: 2px solid aqua;
@@ -228,11 +303,13 @@ html {
 		text-decoration: none;
 		float: right;
 	}
+
 	#navbar a:hover {
 		border-bottom: 2px solid aqua;
 		color: rgb(0, 132, 255);
 		transition: 0.5s;
 	}
+
 	#navbar a.active {
 		display: block;
 		background-color: skyblue;
@@ -248,4 +325,14 @@ html {
 		transition: 0.5s;
 	}
 
+}
+
+@keyframes fade {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
 }
